@@ -38,29 +38,12 @@ class Circle {
         this.posx += this.dx;
         this.posy += this.dy;
         
-        if((this.posX + this.radius) > window_width)
-        {
-            //Invierte el cirulo o lo fokin regresa
-            //Si el circulo supera el margen derecha entonces se mueve a la izquierda
+        if ((this.posx + this.radius) > window_width || (this.posx - this.radius) < 0) {
             this.dx = -this.dx;
         }
-
-        if((this.posX - this.radius) <0 )
-        {
-            //Invierte el cirulo o lo fokin regresa
-            //Si el circulo supera el margen izquierda entonces se mueve a la derecha
-            this.dx = -this.dx;
-        }
-        if((this.PosY - this.radius) < 0)
-        {
-            //Invierte el cirulo o lo fokin regresa
-            //Si el circulo supera el margen superior entonces se mueve hacia abajo
-            this.dy = -this.dy;
-        }
-        if((this.PosY + this.radius) > window_height)
-        {
-            //Invierte el cirulo o lo fokin regresa
-            //Si el circulo supera el margen inferior entonces se mueve hacia arriba
+        
+       
+        if ((this.posy + this.radius) > window_height || (this.posy - this.radius) < 0) {
             this.dy = -this.dy;
         }
         
